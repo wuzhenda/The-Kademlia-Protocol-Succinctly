@@ -127,7 +127,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\modules.xml" />
+    <Content Include="modules.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Clifton.Kademlia.Common\Clifton.Kademlia.Common.csproj">
@@ -142,6 +144,9 @@
       <Project>{09b2544a-c451-43cf-8bf0-7229601cf27b}</Project>
       <Name>Clifton.Kademlia</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
